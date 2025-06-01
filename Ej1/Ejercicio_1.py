@@ -5,16 +5,16 @@ import matplotlib.pyplot as plt
 from scipy import special
 
 # Valores de x para intervalo x>0
-x_0 = np.linspace(0, 7, 50)
+x_0 = np.linspace(0, 7, 100)
 
 # Valores de x para intervalo -4<x<4
-x_1 = np.linspace(-4, 4, 50)
+x_1 = np.linspace(-4, 4, 100)
 
 # Valores de x para intervalo mas grande positivo
-x_2 = np.linspace(0, 15, 50)
+x_2 = np.linspace(0, 15, 100)
 
 # Valores de x para intervalo -8<x<8
-x_3 = np.linspace(0, 10, 200)
+x_3 = np.linspace(0, 10, 100)
 
 # Polinomios de Laguerre
 L0 = special.eval_laguerre(0, x_0)
@@ -86,9 +86,9 @@ J32 = special.jv(3/2, x_2)
 
 # Graficacion de las funciones de Bessel con indice semi-entero
 plt.figure(4, figsize=(10,8))
-plt.plot(x_2, Jm12, label=f'$J_{-1/2}(x)$')
-plt.plot(x_2, J12, label=f'$J_{1/2}(x)$')
-plt.plot(x_2, J32, label=f'$J_{3/2}(x)$')
+plt.plot(x_2, Jm12, label=r'$J_{-1/2}(x)$')
+plt.plot(x_2, J12, label=r'$J_{1/2}(x)$')
+plt.plot(x_2, J32, label=r'$J_{3/2}(x)$')
 plt.xlim(0, 15)
 plt.ylim(-1, 1)
 plt.xlabel('x')
@@ -103,8 +103,8 @@ Y12 = special.yv(1/2, x_2)
 
 # Graficacion de la funcion de Bessel de segunda clase con primera clase semi-entero
 plt.figure(4, figsize=(10,8))
-plt.plot(x_2, Y12, label=f'$Y_{-1/2}(x)$')
-plt.plot(x_2, J12, label=f'$J_{1/2}(x)$')
+plt.plot(x_2, Y12, label=r'$Y_{-1/2}(x)$')
+plt.plot(x_2, J12, label=r'$J_{1/2}(x)$')
 plt.xlim(0, 15)
 plt.ylim(-1.5, 1)
 plt.xlabel('x')
@@ -142,7 +142,7 @@ plt.plot(x_3, j2, label=f'Re($h^2_2(x)$)')
 plt.plot(x_3, h22.imag, linestyle='--', label=f'Im($h^2_2(x)$)')
 
 plt.xlim(0, 10)
-plt.ylim(-2, 2)
+plt.ylim(-1.5, 1.5)
 plt.xlabel('x')
 plt.ylabel('$h_{n}^{(1,2)}(x)$')
 plt.grid(True)
