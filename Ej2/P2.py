@@ -41,8 +41,8 @@ producto = pL(x) * pC(x) * weightFunc(x)
 plotFunc(x,producto,'Producto Legendre - Chebyshev')
 
 #Calcula los polinomios
-pL1 = polLegendre(2)
-pL2 = polLegendre(3)
+pL1 = polChebyshev(2)
+pL2 = polChebyshev(3)
 
 #Acomoda el integrando de la funcion sin evaluar x
 producto = pL1(x) * pL2(x) * weightFunc(x)
