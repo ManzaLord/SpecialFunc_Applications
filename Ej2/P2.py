@@ -31,8 +31,8 @@ def plotFunc(x, data, name):
 x = np.linspace(-1,1,1000)
 
 #Calcula los polinomios
-pL = polLegendre(2)
-pC = polChebyshev(3)
+pL = polLegendre(7)
+pC = polChebyshev(8)
 
 #Acomoda el integrando de la funcion sin evaluar x
 producto = pL(x) * pC(x) * weightFunc(x)
@@ -42,7 +42,7 @@ plotFunc(x,producto,'Producto Legendre - Chebyshev')
 
 #Calcula los polinomios
 pL1 = polChebyshev(2)
-pL2 = polChebyshev(3)
+pL2 = polChebyshev(6)
 
 #Acomoda el integrando de la funcion sin evaluar x
 producto = pL1(x) * pL2(x) * weightFunc(x)
