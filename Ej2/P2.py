@@ -21,10 +21,10 @@ def plotFunc(x, data, name):
     plt.ylabel("Y")
     plt.xlabel("X")
     plt.title(name)
+    plt.grid(True)
     
     #Guarda la grafica
     plt.savefig(f"{name}.pdf")
-    plt.grid(True)
     plt.show()
 
 #Define el intervalo de los polinomios
