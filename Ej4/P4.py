@@ -22,7 +22,7 @@ for t in range(1,4):
     #Define la coordenada z en funcion del tiempo
     z = j0(k00 * r) * np.cos(k00 * v * t)
 
-    #Graficar
+    #Grafica la membrana
     fig = plt.figure(figsize=(10, 7))
     ax = fig.add_subplot(111, projection='3d')
     surf = ax.plot_surface(x,y,z, cmap='winter')
